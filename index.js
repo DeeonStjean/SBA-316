@@ -1,3 +1,5 @@
+const app = document.getElementById("app");
+
 var menuLinks = [
     {text: 'Home', href: '/Home'},
     {text: 'catalog', href: '#', subLinks: [
@@ -19,9 +21,9 @@ var menuLinks = [
 function showContent() {
     let temp = document.getElementsByTagName("template")[0];
     let clon = temp.content.cloneNode(true);
-    document.body.appendChild(clon);
+    return clon;
 }
-showContent();//to show nav bar
+app.appendChild(showContent());//to show nav bar
 
 let topMenuEl = document.getElementById("top-menu");
 topMenuEl.style.height = "100%";
