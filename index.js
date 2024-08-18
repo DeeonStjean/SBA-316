@@ -15,6 +15,13 @@ var menuLinks = [
       {text: 'sign out', href: '/account/signout'},
     ]},
 ];
+//template to show nav bar
+function showContent() {
+    let temp = document.getElementsByTagName("template")[0];
+    let clon = temp.content.cloneNode(true);
+    document.body.appendChild(clon);
+}
+showContent();//to show nav bar
 
 let topMenuEl = document.getElementById("top-menu");
 topMenuEl.style.height = "100%";
