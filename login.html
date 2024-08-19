@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--template for nav bar-->
+    <div id="app">
+        <template>
+            <header>
+                <nav id="top-menu"></nav>
+                <nav id="sub-menu"></nav>
+            </header>
+        </template>
+    </div>
+    <!--template for nav bar-->
+
+    <div class="form-container">
+        <!-- Registration Side  html form-->
+        <div id="app">
+            <p>Register</p>
+            <form id="myForm">
+              <input type="text"
+              name="Name"
+              placeholder="Enter a Username"
+              pattern="^[a-zA-Z]+"
+              title="Please start your username with a letter from a-z."
+              required/>
+              <input type="text"
+              name="Email"
+              placeholder="Enter your Email "
+              title="Please start your email with a letter and follow the format name@mail.com"
+              pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$" required/>
+              <input
+                type="password" minlength="4" maxlength="12"
+                name="password"
+                id="password"
+                placeholder="Enter a Password"
+                required
+                />
+              <button type="submit">Submit</button>
+            </form>
+        </div>
+        <!-- Registration Side -->
+        <div id="app">
+            <p>login if you already have account </p>
+            <form id="myForm">
+              <input type="text" minlength="4" maxlength="10" required />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

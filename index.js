@@ -97,7 +97,7 @@ subMenuEl.addEventListener('click',(event)=>{
     });
   }
 });
-//BOM
+//<-----BOM------->
 let availH = window.screen.availHeight;
 let availW = window.screen.availWidth;
 let myWindow;
@@ -135,4 +135,28 @@ function closeSecWindow() {
 document.getElementById("openWindowBtn2").addEventListener("click", newSecWindow);
 document.getElementById("closeWindowBtn2").addEventListener("click", closeSecWindow);
 
-//BOM
+let myThirdWindow;
+
+function newThiWindow() {
+  mythirdWindow = window.open(
+    "login.html",
+    "login",
+    "width=800, height=400, resizable=yes, scrollbars=yes, location=yes"
+  );
+  mySecondWindow.focus();
+}
+function closeThiWindow() {
+    myWindow.close();
+  }
+document.getElementById("openWindowBtn3").addEventListener("click", newThiWindow);
+document.getElementById("closeWindowBtn3").addEventListener("click", closeThiWindow);
+//<---BOM------>
+
+//<------html form-------->
+const myForm = document.getElementById("myForm");
+
+myForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert(`You submitted: 
+  ${myForm.querySelector("input").value}`);
+});
