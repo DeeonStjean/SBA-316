@@ -154,9 +154,22 @@ document.getElementById("closeWindowBtn3").addEventListener("click", closeThiWin
 
 //<------html form-------->
 const myForm = document.getElementById("myForm");
-
 myForm.addEventListener("submit", (e) => {
   e.preventDefault();
   alert(`You submitted: 
   ${myForm.querySelector("input").value}`);
 });
+//<-----javascript form---->
+const form = document.getElementById("form");
+const email = form.elements["email"];
+const password = form.elements["password"];
+
+function validateEmail() {
+    let x = document.forms["jForm"]["email"].value;
+  if (x == "") {
+    alert("email must be filled out");
+    return false;
+  }
+}
+
+validateEmail();
