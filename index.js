@@ -97,3 +97,42 @@ subMenuEl.addEventListener('click',(event)=>{
     });
   }
 });
+//BOM
+let availH = window.screen.availHeight;
+let availW = window.screen.availWidth;
+let myWindow;
+function newWindow() {
+  myWindow = window.open(
+    "https://www.crunchyroll.com/",
+    "crunchyroll",
+    `width=${availW * 0.75}, height=${availH * 0.75}, left=${
+      availW * 0.125
+    }, top=${availH * 0.125}, resizable=yes, scrollbars=yes, location=yes`
+  );
+  myWindow.focus();
+}
+function closeWindow() {
+  myWindow.close();
+}
+// A sneak peek at event handling!
+// This will be covered in depth during a future lesson.
+document.getElementById("openWindowBtn").addEventListener("click", newWindow);
+document.getElementById("closeWindowBtn").addEventListener("click", closeWindow);
+
+let mySecondWindow;
+
+function newSecWindow() {
+  mySecondWindow = window.open(
+    "https://www.hulu.com/welcome?orig_referrer=https%3A%2F%2Fwww.google.com%2F",
+    "Hulu",
+    "width=800, height=400, resizable=yes, scrollbars=yes, location=yes"
+  );
+  mySecondWindow.focus();
+}
+function closeSecWindow() {
+    myWindow.close();
+  }
+document.getElementById("openWindowBtn2").addEventListener("click", newSecWindow);
+document.getElementById("closeWindowBtn2").addEventListener("click", closeSecWindow);
+
+//BOM

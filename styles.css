@@ -52,7 +52,37 @@ header, #top-menu {
 #sub-menu a:hover {
     background-color: var(--top-menu-bg);
 }
-    nav a.active {
+nav a.active {
     background-color: var(--sub-menu-bg);
     color: var(--main-bg);
+}
+.stream-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.pricing-plan{
+    background-color: cornflowerblue;
+    flex: 1;/*so it can grow and shrink*/
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.plan-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;/*to have space in between title and price*/
+}
+
+.plan-price{
+    font-weight: bold;/*lesson 6.1*/
+    font-size: 48px;
+    margin-bottom: 10px;/*to have space between price and feature*/
+}
+h2{
+    text-align: center;
 }
